@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>org.wso2</groupId>
+        <artifactId>wso2</artifactId>
+        <version>5</version>
+        <relativePath />
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.kasun.testing</groupId>
+    <artifactId>p2-repo-gen</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.wso2.carbon</groupId>
+            <artifactId>org.wso2.carbon.pax.exam.feature</artifactId>
+            <version>${org.wso2.carbon.pax.exam.feature.version}</version>
+            <type>zip</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.wso2.carbon.maven</groupId>
+                <artifactId>carbon-feature-plugin</artifactId>
+                <version>${carbon.feature.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>p2-repo-generation</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>generate-repo</goal>
+                        </goals>
+                        <configuration>
+                            <targetRepository>file:${basedir}/target/p2-repo/</targetRepository>
+                            <features>
+                                <feature>
+                                    <id>org.wso2.carbon.pax.exam.feature</id>
+                                    <version>${org.wso2.carbon.pax.exam.feature.version}</version>
+                                </feature>
+                            </features>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <properties>
+        <org.wso2.carbon.pax.exam.feature.version>5.2.0.1</org.wso2.carbon.pax.exam.feature.version>
+        <carbon.feature.plugin.version>3.1.3</carbon.feature.plugin.version>
+    </properties>
+
+</project>
