@@ -1,260 +1,74 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ~ Copyright (c) 2015, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ ~
+ ~ Licensed under the Apache License, Version 2.0 (the "License");
+ ~ you may not use this file except in compliance with the License.
+ ~ You may obtain a copy of the License at
+ ~
+ ~      http://www.apache.org/licenses/LICENSE-2.0
+ ~
+ ~ Unless required by applicable law or agreed to in writing, software
+ ~ distributed under the License is distributed on an "AS IS" BASIS,
+ ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ ~ See the License for the specific language governing permissions and
+ ~ limitations under the License.
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
     <parent>
         <groupId>org.wso2</groupId>
         <artifactId>wso2</artifactId>
         <version>5</version>
-        <relativePath/>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
+    <groupId>org.wso2.carbon.feature.repository</groupId>
+    <artifactId>feature-repository</artifactId>
+    <version>4.4.24-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>WSO2 Carbon - Feature Repository</name>
+    <url>http://wso2.org</url>
 
-    <groupId>com.kasun.testing</groupId>
-    <artifactId>p2-repo-gen</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>wso2-nexus</id>
+            <name>WSO2 internal Repository</name>
+            <url>http://maven.wso2.org/nexus/content/groups/wso2-public/</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+                <checksumPolicy>ignore</checksumPolicy>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>org.wso2.carbon.pax.exam.feature</artifactId>
-            <version>${org.wso2.carbon.pax.exam.feature.version}</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>org.wso2.carbon.c5.sample.feature</artifactId>
-            <version>${org.wso2.carbon.c5.sample.feature.version}</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>org.wso2.carbon.c5.extending.feature</artifactId>
-            <version>${org.wso2.carbon.c5.extending.feature.version}</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>sample.4.feature</artifactId>
-            <version>${sample.4.feature.version}</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>sample.5.feature</artifactId>
-            <version>${sample.5.feature.version}</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>sample.6.feature</artifactId>
-            <version>${sample.6.feature.version}</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>sample.7.feature</artifactId>
-            <version>${sample.7.feature.version}</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>sample.8.feature</artifactId>
-            <version>${sample.8.feature.version}</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>sample.9.feature</artifactId>
-            <version>${sample.9.feature.version}</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>sample.10.feature</artifactId>
-            <version>${sample.10.feature.version}</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>sample.11.feature</artifactId>
-            <version>${sample.11.feature.version}</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>sample.12.feature</artifactId>
-            <version>${sample.12.feature.version}</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>sample.13.feature</artifactId>
-            <version>${sample.13.feature.version}</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>sample.14.feature</artifactId>
-            <version>${sample.14.feature.version}</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>sample.15.feature</artifactId>
-            <version>${sample.15.feature.version}</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>sample.16.feature</artifactId>
-            <version>${sample.16.feature.version}</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>sample.17.feature</artifactId>
-            <version>${sample.17.feature.version}</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>sample.18.feature</artifactId>
-            <version>${sample.18.feature.version}</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>sample.19.feature</artifactId>
-            <version>${sample.19.feature.version}</version>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>org.wso2.carbon</groupId>
-            <artifactId>sample.20.feature</artifactId>
-            <version>${sample.20.feature.version}</version>
-            <type>zip</type>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.wso2.carbon.maven</groupId>
-                <artifactId>carbon-feature-plugin</artifactId>
-                <version>${carbon.feature.plugin.version}</version>
-                <executions>
-                    <execution>
-                        <id>p2-repo-generation</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>generate-repo</goal>
-                        </goals>
-                        <configuration>
-                            <targetRepository>file:${basedir}/target/p2-repo/</targetRepository>
-                            <features>
-                                <feature>
-                                    <id>org.wso2.carbon.pax.exam.feature</id>
-                                    <version>${org.wso2.carbon.pax.exam.feature.version}</version>
-                                </feature>
-                                <feature>
-                                    <id>org.wso2.carbon.c5.sample.feature</id>
-                                    <version>${org.wso2.carbon.c5.sample.feature.version}</version>
-                                </feature>
-                                <feature>
-                                    <id>org.wso2.carbon.c5.extending.feature</id>
-                                    <version>${org.wso2.carbon.c5.extending.feature.version}</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.4.feature</id>
-                                    <version>${sample.4.feature.version}</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.5.feature</id>
-                                    <version>${sample.5.feature.version}</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.6.feature</id>
-                                    <version>${sample.6.feature.version}</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.7.feature</id>
-                                    <version>${sample.7.feature.version}</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.8.feature</id>
-                                    <version>${sample.8.feature.version}</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.9.feature</id>
-                                    <version>${sample.9.feature.version}</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.10.feature</id>
-                                    <version>${sample.10.feature.version}</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.11.feature</id>
-                                    <version>${sample.11.feature.version}</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.12.feature</id>
-                                    <version>${sample.12.feature.version}</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.13.feature</id>
-                                    <version>${sample.13.feature.version}</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.14.feature</id>
-                                    <version>${sample.14.feature.version}</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.15.feature</id>
-                                    <version>${sample.15.feature.version}</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.16.feature</id>
-                                    <version>${sample.16.feature.version}</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.17.feature</id>
-                                    <version>${sample.17.feature.version}</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.18.feature</id>
-                                    <version>${sample.18.feature.version}</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.19.feature</id>
-                                    <version>${sample.19.feature.version}</version>
-                                </feature>
-                                <feature>
-                                    <id>sample.20.feature</id>
-                                    <version>${sample.20.feature.version}</version>
-                                </feature>
-                            </features>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+    <scm>
+        <url>https://github.com/wso2/carbon-feature-repository.git</url>
+        <developerConnection>scm:git:https://github.com/wso2/carbon-feature-repository.git</developerConnection>
+        <connection>scm:git:https://github.com/wso2/carbon-feature-repository.git</connection>
+        <tag>HEAD</tag>
+    </scm>
 
     <properties>
+        <carbon.p2.plugin.version>1.5.4</carbon.p2.plugin.version>
         <org.wso2.carbon.pax.exam.feature.version>5.2.0.1</org.wso2.carbon.pax.exam.feature.version>
         <org.wso2.carbon.c5.sample.feature.version>5.2.0.1</org.wso2.carbon.c5.sample.feature.version>
         <org.wso2.carbon.c5.extending.feature.version>5.2.0.1
         </org.wso2.carbon.c5.extending.feature.version>
         <sample.4.feature.version>5.2.0.1</sample.4.feature.version>
+        <sample.5.feature.old.version>5.2.0</sample.5.feature.old.version>
         <sample.5.feature.version>5.2.0.1</sample.5.feature.version>
         <sample.6.feature.version>5.2.0.1</sample.6.feature.version>
         <sample.7.feature.version>5.2.0.1</sample.7.feature.version>
+        <sample.8.feature.old.version>5.2.0</sample.8.feature.old.version>
         <sample.8.feature.version>5.2.0.1</sample.8.feature.version>
         <sample.9.feature.version>5.2.0.1</sample.9.feature.version>
         <sample.10.feature.version>5.2.0.1</sample.10.feature.version>
-        <sample.11.feature.version>5.2.0</sample.11.feature.version>
+        <sample.11.feature.old.version>5.2.0</sample.11.feature.old.version>
+        <sample.11.feature.version>5.2.0.1</sample.11.feature.version>
         <sample.12.feature.version>5.2.0</sample.12.feature.version>
         <sample.13.feature.version>5.2.0.1</sample.13.feature.version>
         <sample.14.feature.version>5.2.0</sample.14.feature.version>
@@ -265,7 +79,101 @@
         <sample.19.feature.version>5.2.0</sample.19.feature.version>
         <sample.20.feature.version>5.2.0</sample.20.feature.version>
 
-        <carbon.feature.plugin.version>3.1.3</carbon.feature.plugin.version>
     </properties>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.wso2.maven</groupId>
+                <artifactId>carbon-p2-plugin</artifactId>
+                <version>${carbon.p2.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>2-p2-repo-generation</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>p2-repo-gen</goal>
+                        </goals>
+                        <configuration>
+                            <metadataRepository>file:${basedir}/target/p2-repo</metadataRepository>
+                            <artifactRepository>file:${basedir}/target/p2-repo</artifactRepository>
+                            <publishArtifacts>true</publishArtifacts>
+                            <publishArtifactRepository>true</publishArtifactRepository>
+                            <featureArtifacts>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:org.wso2.carbon.pax.exam.feature:${org.wso2.carbon.pax.exam.feature.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:org.wso2.carbon.c5.sample.feature:${org.wso2.carbon.c5.sample.feature.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:org.wso2.carbon.c5.extending.feature:${org.wso2.carbon.c5.extending.feature.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:sample.4.feature:${sample.4.feature.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:sample.5.feature:${sample.5.feature.old.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:sample.5.feature:${sample.5.feature.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:sample.6.feature:${sample.6.feature.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:sample.7.feature:${sample.7.feature.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:sample.8.feature:${sample.8.feature.old.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:sample.8.feature:${sample.8.feature.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:sample.9.feature:${sample.9.feature.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:sample.10.feature:${sample.10.feature.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:sample.11.feature:${sample.11.feature.old.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:sample.11.feature:${sample.11.feature.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:sample.12.feature:${sample.12.feature.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:sample.13.feature:${sample.13.feature.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:sample.14.feature:${sample.14.feature.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:sample.15.feature:${sample.15.feature.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:sample.16.feature:${sample.16.feature.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:sample.17.feature:${sample.17.feature.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:sample.18.feature:${sample.18.feature.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:sample.19.feature:${sample.19.feature.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon:sample.20.feature:${sample.20.feature.version}
+                                </featureArtifactDef>
+                            </featureArtifacts>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
